@@ -1,0 +1,23 @@
+{
+    "type": "record",
+    "name": "query",
+    "doc": "Query struct used for all query related processing flows",
+    "fields":
+    [
+    {
+        "type": "string",
+        "name": "id",
+        "doc": "Identifies the QueryInstance that owns this datapoint"
+    },
+    {
+        "type": "string",
+        "name": "query",
+        "doc": "The query string"
+    },
+    {
+      "type": {"type": "map", "values": "string"},
+      "name": "metadata",
+      "doc": "Metadata associated with this query."
+    }
+    ]
+}

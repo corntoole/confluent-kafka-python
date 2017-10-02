@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "query",
+  "doc": "Query struct used for all query related processing flows",
+  "fields":
+  [
+    {
+      "doc": "Identifies the type of Query to be processed",
+      "name": "querytype",
+      "type": {
+        "type": "enum",
+        "name": "QueryType",
+        "symbols" : ["ADHOC", "TYPED"]
+      }
+    },
+    {
+      "type": "string",
+      "name": "id",
+      "doc": "Identifies the QueryInstance that owns this Query"
+    },
+    {
+      "type": "string",
+      "name": "query",
+      "doc": "The query string"
+    },
+    {
+      "type": {"type": "map", "values": "string"},
+      "name": "queryParams",
+      "doc": "The query parameters"
+    },
+    {
+      "type": {"type": "map", "values": "string"},
+      "name": "metadata",
+      "doc": "Metadata associated with this query."
+    }
+  ]
+}
